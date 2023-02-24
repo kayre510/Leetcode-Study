@@ -59,18 +59,3 @@ print(isValid("(([]{}))"))
 
 
 
-def isValid(s):
-    #create a stack to keep track of the opening brackets
-    #create a hashmap to check if the character in the string matches with the element in the hashmap
-    # itereate through the string
-        #if the character in string is in the map
-            #create top element variable = stack.pop remove the upmost element from the stack. if the stack is empty assign a dummy element of '#'
-            #if the top element is not equal to the mapping character
-            #return false
-
-        #else
-            #append the element to the stack using stack.append(character)
-
-    stack = []
-
-    mapping = 
