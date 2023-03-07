@@ -1,4 +1,5 @@
 # Definition for singly-linked list.
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -6,18 +7,21 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        filler_head = ListNode(0)
-        current = filler_head
-        while list1 != None or list2 != None:
-            list1_val = list1.val if list1 else 101
-            list2_val = list2.val if list2 else 101
-            if list1_val <= list2_val:
-                new_node = ListNode(list1_val)
-                list1 = list1.next if list1 else None
+        dummy_node = ListNode(0)
+        current_val = dummy_node
+        #iterate through the two lists if both are not empty
+        while list1 and list2:
+            if list1.val < list2.val:
+                current_val.next = list1 # tail.next points to list1 node
+                list1 = list1.next
             else:
-                new_node = ListNode(list2_val)
-                list2 = list2.next if list2 else None
-            current.next = new_node
-            current = new_node
-        return filler_head.next
-    
+                current_val.next = list2
+                list2 = list2.next
+            current_val = current_val.next
+
+        if list1:
+            current_val.next = list1
+        elif list2:
+            current_val.next = list2
+
+        return dummy_node.next
