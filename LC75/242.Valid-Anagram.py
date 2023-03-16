@@ -12,16 +12,18 @@
 # Output: false
 
 def isAnagram(s, t):
-    flag = True
-    if len(s) != len(t):
-        flag = False
-    else:
-        letters = "abcdefghijklmnopqrstuvwxyz"
-        for letter in letters:
-            if s.count(letter) != t.count(letter):
-                flag = False
-                break
-    return flag
+        d1 = {}
+        d2 = {}
+
+        for character in s:
+            if character not in d1:
+                d1[character] = 0
+            d1[character] += 1
+
+        for character in t:
+            if character not in d2:
+                d2[character] = 0
+            d1[character] += 1
 
 
 s = "anagram"
