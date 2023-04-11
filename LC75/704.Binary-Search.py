@@ -31,3 +31,4 @@ print(search(nums, target))
 #vvvvvvv
 #ffff
 #fgffffffffffffff
+#frff
