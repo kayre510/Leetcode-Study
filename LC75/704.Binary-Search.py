@@ -30,3 +30,4 @@ target = 9
 print(search(nums, target))
 #vvvvvvv
 #ffff
+#fgfff
