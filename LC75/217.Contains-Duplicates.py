@@ -12,4 +12,4 @@ def containsDuplicate(nums):
         else:
             dict[num] = 1
 
-###
+##########
