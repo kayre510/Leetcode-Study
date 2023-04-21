@@ -11,3 +11,5 @@ def containsDuplicate(nums):
             return True
         else:
             dict[num] = 1
+
+###
