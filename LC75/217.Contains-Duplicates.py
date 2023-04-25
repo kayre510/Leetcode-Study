@@ -5,9 +5,9 @@
 # Output: true
 
 def containsDuplicate(nums):
-    dictionary =  {}
-    for i, j in enumerate(nums):
-        if j in dictionary:
+    dict = {}
+    for num in nums:
+        if num in dict:
             return True
         else:
-            dictionary[j] = i
+            dict[num] = 1
